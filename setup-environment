@@ -184,8 +184,8 @@ init_env() {
   log "INFO" "Initializing bitbake environment."
   export BB_ENV_PASSTHROUGH_ADDITIONS="$BB_ENV_PASSTHROUGH_ADDITIONS CUST_ID FWZIP_PATH"
   # switch to oe-core directory, so oe-init-build-env can figure out OEROOT correctly
-  cd  "${PWD}/oe-core"
   set -- "$PWD/build"
+  cd  "${PWD}/oe-core"
   . "$PWD/oe-init-build-env"
 }
 
